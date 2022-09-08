@@ -1,6 +1,7 @@
 # Image Processing Api
 
 
+
 ## This is the first project of the Advanced web development nano degree offered by udacity . 
 ## The project goal is to make an api with express node.js which handles image resizing for a specified image using sharp package which offers alot of image processing operations . 
 
