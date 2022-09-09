@@ -7,6 +7,7 @@
 ## This is the first project of the Advanced web development nano degree offered by udacity . 
  The project goal is to make an api with `express` `node.js` which handles image resizing for a specified image using [`sharp`](https://www.npmjs.com/package/sharp) package which offers alot of image processing operations . 
 
+
  The api simply handles one endpoint which is `/images` and the image file name and the desired new height and width is provided with the query parameters of the url . 
 
 In order to improve the performance i used cache memory to avoid proocessing the same image for the same request every time . to achieve this i used [`node-cache`](https://www.npmjs.com/package/node-cache) package .
