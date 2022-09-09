@@ -5,8 +5,8 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - use: actions/checkout@v3
-      - use: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: '14'
       - run: npm i
