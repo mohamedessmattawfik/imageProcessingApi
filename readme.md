@@ -1,3 +1,5 @@
+![Jasmine Tests ](https://github.com/mohamedessmattawfik/imageProcessingApi/actions/workflows/main.yml/badge.svg)
+
 # Image Processing Api
 
 
