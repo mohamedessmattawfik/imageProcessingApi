@@ -2,6 +2,7 @@ name: testing-api
 on: [push]
 jobs:
   check-linting:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - use: actions/checkout@v3
@@ -11,6 +12,7 @@ jobs:
       - run: npm i
       - run: npm run lint
   check-jasmine-tests:
+    name: Testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
