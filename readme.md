@@ -1,4 +1,4 @@
-![Jasmine Tests ](https://github.com/mohamedessmattawfik/imageProcessingApi/actions/workflows/main.yml/badge.svg)
+[![Actions Status](https://github.com/mohamedessmattawfik/imageProcessingApi/workflows/Lint%20and%20Test/badge.svg)](https://github.com/mohamedessmattawfik/imageProcessingApi/actions)
 
 # Image Processing Api
 
