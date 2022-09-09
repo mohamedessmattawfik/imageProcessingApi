@@ -1,7 +1,13 @@
 import supertest from 'supertest';
 import app from '../../index';
+import path from 'path';
+import imageResize from '../../services/imageService';
 
 const request = supertest(app);
+const testWidth = 300;
+const testHeight = 400;
+const imagePath =
+  path.resolve('./') + '/public/inputImages/icelandwaterfall.jpeg';
 
 describe('Testing images end point', () => {
   it('should return an error when passing no fileName paramter', async () => {
@@ -26,5 +32,13 @@ describe('Testing images end point', () => {
     await request
       .get('/api/images?fileName=icelandwaterfall&width=200&height=300')
       .expect(200);
+  });
+});
+
+describe('Testing image processing functionality', () => {
+  it('should perform image resize process without throwing errors', () => {
+    expect(() => {
+      imageResize(imagePath, testWidth, testHeight);
+    }).not.toThrow();
   });
 });
