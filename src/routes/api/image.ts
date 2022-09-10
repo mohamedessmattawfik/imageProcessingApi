@@ -7,7 +7,11 @@ import NodeCache from 'node-cache';
 const imageRoutes = Router();
 const cacheMemory = new NodeCache({ stdTTL: 20 });
 
-const checkCache = (req: Request, res: Response, next: NextFunction) => {
+const checkCache = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Response | void => {
   try {
     const imageUrl = req.url;
     if (cacheMemory.has(imageUrl)) {
@@ -19,7 +23,11 @@ const checkCache = (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
-const checkValidParams = (req: Request, res: Response, next: NextFunction) => {
+const checkValidParams = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Response | void => {
   const { fileName, width, height } = req.query;
   if (fileName === undefined || fileName === '') {
     return res.status(400).send(' You must enter file name');
